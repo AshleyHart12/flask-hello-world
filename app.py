@@ -11,7 +11,7 @@ def hello_world():
 def db_test():
     conn = psycopg2.connect("postgresql://flask_database_24bv_user:3qisfEWiB1nELMoC8SXlOhCyQXVG6JaG@dpg-cse42qu8ii6s738sfqs0-a/flask_database_24bv")
     conn.close()
-    return "DB Test Working"
+    return "Database Connection Successful"
 
 @app.route('/db_create')
 def db_create():
@@ -31,7 +31,7 @@ def db_create():
     return "Basketball Table Successfully Created"
 
 @app.route('/db_insert')
-def db_inserting():
+def db_insert():
     conn = psycopg2.connect("postgresql://flask_database_24bv_user:3qisfEWiB1nELMoC8SXlOhCyQXVG6JaG@dpg-cse42qu8ii6s738sfqs0-a/flask_database_24bv")
     cur = conn.cursor()
     cur.execute('''
